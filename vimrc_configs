@@ -12,7 +12,6 @@ filetype plugin indent on    " required
 syntax on
 
 set t_Co=256
-colorscheme atom-dark
 let g:rooter_patterns = [ 'Vagrantfile', '.kitchen.yml', '.git' ]
 
  
