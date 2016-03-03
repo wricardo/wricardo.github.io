@@ -1,0 +1,4 @@
+echo 'mapclear | mapclear <buffer> | mapclear! | mapclear! <buffer>' > ~/.wricardorc
+echo 'set all&' >> ~/.wricardorc
+curl wricardo.github.io/vimrc_mappings >> ~/.wricardorc
+curl wricardo.github.io/vimrc_configs >> ~/.wricardorc
