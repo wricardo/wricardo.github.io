@@ -1,0 +1,73 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+set backspace=indent,eol,start
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<c-j>"
+let g:UltiSnipsListSnippets="<c-l>"
+
+filetype plugin indent on    " required
+
+syntax on
+
+set t_Co=256
+colorscheme atom-dark
+let g:rooter_patterns = [ 'Vagrantfile', '.kitchen.yml', '.git' ]
+
+ 
+
+"ENABLE RESIZE WITH MOUSE
+set ttyfast
+
+" Enable mouse use in all modes
+set mouse=a
+
+"autohighlight
+autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" Always show current position
+set number
+
+set incsearch
+"search is case insensitive
+set ic
+
+
+set encoding=utf8
+
+" Turn backup off, since most stuff is in Git anyway...
+set nobackup
+set nowb
+set noswapfile
+
+set nowrap
+
+
+autocmd FileType yml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
+
+"GOLANG
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+au BufReadPost Vagrantfile set syntax=ruby
+au BufReadPost *.rb set syntax=ruby.chef
+
+let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
+
+" Bidirectional & within line 't' motion
+omap t <Plug>(easymotion-bd-tl)
+" Use uppercase target labels and type as a lower case
+let g:EasyMotion_use_upper = 1
+" type l and match l&L
+let g:EasyMotion_smartcase = 1
+" Smartsign (type 3 and match 3&#)
+let g:EasyMotion_use_smartsign_us = 1
