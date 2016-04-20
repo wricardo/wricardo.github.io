@@ -1,0 +1,10 @@
+if [ ! -d  ~/.vim/bundle/ ]; then
+    mkdir -p ~/.vim/bundle/
+fi
+if [ ! -d  ~/.vim/bundle/Vundle.vim ]; then
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
+
+curl wricardo.github.io/vimrc_base > ~/.wricardorc
+curl wricardo.github.io/vimrc_mappings > ~/.wricardorc_mappings
+curl wricardo.github.io/vimrc_configs > ~/.wricardorc_configs

@@ -1,0 +1,38 @@
+"CLEAR ALL PREVIOUS CONIFGS
+mapclear | mapclear <buffer> | mapclear! | mapclear! <buffer>
+set all&
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'fatih/vim-go'
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'ryuzee/neocomplcache_php_selenium_snippet'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-eunuch'
+Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-surround'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
+#Plugin 'derekwyatt/vim-scala'
+Plugin 'mileszs/ack.vim'
+#Plugin 'airblade/vim-rooter'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'jiangmiao/auto-pairs'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+" Source key mappings
+so ~/.wricardorc_configs
+so ~/.wricardorc_mappings
+colorscheme atom-dark
