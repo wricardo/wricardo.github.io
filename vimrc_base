@@ -22,9 +22,9 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
-#Plugin 'derekwyatt/vim-scala'
+"Plugin 'derekwyatt/vim-scala'
 Plugin 'mileszs/ack.vim'
-#Plugin 'airblade/vim-rooter'
+"Plugin 'airblade/vim-rooter'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'jiangmiao/auto-pairs'
 
