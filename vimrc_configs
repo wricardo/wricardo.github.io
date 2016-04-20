@@ -14,7 +14,8 @@ syntax on
 set t_Co=256
 let g:rooter_patterns = [ 'Vagrantfile', '.kitchen.yml', '.git' ]
 
- 
+"Diplay :Explore in a tree style
+let g:netrw_liststyle=3
 
 "ENABLE RESIZE WITH MOUSE
 set ttyfast
