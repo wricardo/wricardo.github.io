@@ -27,6 +27,7 @@ Plugin 'mileszs/ack.vim'
 "Plugin 'airblade/vim-rooter'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'saltstack/salt-vim'
 
 
 " All of your Plugins must be added before the following line
