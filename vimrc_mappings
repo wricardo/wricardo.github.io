@@ -44,17 +44,12 @@ nnoremap ,cl :CtrlP <F5><CR>
 "TAGBAR
 nnoremap tb :TagbarToggle<CR>
 
-nnoremap ;gi :GoImports<CR>
-nnoremap ;gf :GoInfo<CR>
-
 " EasyMotion
 let g:EasyMotion_leader_key = '<Space>'
 map <Space>l <Plug>(easymotion-lineforward)
-map <Space>k <Plug>(easymotion-j)
-map <Space>i <Plug>(easymotion-k)
-map <Space>j <Plug>(easymotion-linebackward)
-nnoremap ;gt :GoTest<CR>
-nnoremap ;gb :GoBuild<CR>
+map <Space>j <Plug>(easymotion-j)
+map <Space>k <Plug>(easymotion-k)
+map <Space>h <Plug>(easymotion-linebackward)
 
 " Bi-directional find motion
 nmap <Space>a <Plug>(easymotion-s)

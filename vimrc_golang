@@ -1,0 +1,26 @@
+
+"GOLANG
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+"Golang Tags
+let g:tagbar_type_go = {
+    \ 'ctagstype': 'go',
+    \ 'kinds' : [
+        \'p:package',
+        \'f:function',
+        \'v:variables',
+        \'t:type',
+        \'c:const'
+    \]
+\}
+
+nnoremap ;gi :GoImports<CR>
+nnoremap ;gf :GoInfo<CR>
+nnoremap ;gt :GoTest<CR>
+nnoremap ;gb :GoBuild<CR>
+nnoremap ;gl :GoLint<CR>
+nnoremap ;gv :GoLint<CR>
+

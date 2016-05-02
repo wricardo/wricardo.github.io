@@ -12,7 +12,6 @@ filetype plugin indent on    " required
 syntax on
 
 set t_Co=256
-let g:rooter_patterns = [ 'Vagrantfile', '.kitchen.yml', '.git' ]
 
 "Diplay :Explore in a tree style
 let g:netrw_liststyle=3
@@ -49,25 +48,6 @@ set nowrap
 
 autocmd FileType yml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-
-
-"GOLANG
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-"Golang Tags
-let g:tagbar_type_go = {
-    \ 'ctagstype': 'go',
-    \ 'kinds' : [
-        \'p:package',
-        \'f:function',
-        \'v:variables',
-        \'t:type',
-        \'c:const'
-    \]
-\}
 
 au BufReadPost Vagrantfile set syntax=ruby
 au BufReadPost *.rb set syntax=ruby.chef
