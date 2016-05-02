@@ -5,6 +5,8 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:go_auto_type_info = 1
+
 "Golang Tags
 let g:tagbar_type_go = {
     \ 'ctagstype': 'go',
@@ -18,9 +20,10 @@ let g:tagbar_type_go = {
 \}
 
 nnoremap ;gi :GoImports<CR>
+nnoremap ;gs :GoImplements<CR>
 nnoremap ;gf :GoInfo<CR>
 nnoremap ;gt :GoTest<CR>
 nnoremap ;gb :GoBuild<CR>
 nnoremap ;gl :GoLint<CR>
-nnoremap ;gv :GoLint<CR>
+nnoremap ;gv :GoVet<CR>
 

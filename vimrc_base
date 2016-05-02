@@ -36,4 +36,5 @@ call vundle#end()            " required
 " Source key mappings
 so ~/.wricardorc_configs
 so ~/.wricardorc_mappings
+so ~/.wricardorc_extras
 colorscheme atom-dark
