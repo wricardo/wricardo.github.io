@@ -15,7 +15,7 @@ Plugin 'kien/ctrlp.vim'
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'ryuzee/neocomplcache_php_selenium_snippet'
+"Plugin 'ryuzee/neocomplcache_php_selenium_snippet'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-eunuch'
 Plugin 'majutsushi/tagbar'
@@ -27,7 +27,8 @@ Plugin 'mileszs/ack.vim'
 "Plugin 'airblade/vim-rooter'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'saltstack/salt-vim'
+Plugin "tpope/vim-commentary"
+"Plugin 'saltstack/salt-vim'
 
 
 " All of your Plugins must be added before the following line
