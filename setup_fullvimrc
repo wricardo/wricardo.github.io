@@ -11,7 +11,7 @@ echo "Installing vimrc configs"
 curl -s wricardo.github.io/vimrc_base > ~/.wricardorc
 curl -s wricardo.github.io/vimrc_mappings > ~/.wricardorc_mappings
 curl -s wricardo.github.io/vimrc_configs > ~/.wricardorc_configs
-curl -s wricardo.github.io/vimrc_golang > ~/.wricardorc_configs
+curl -s wricardo.github.io/vimrc_golang >> ~/.wricardorc_configs
 
 echo "All done! Now just run the following:"
 echo "echo \"so ~/.wricardorc\" > ~/.vimrc"
