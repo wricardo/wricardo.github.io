@@ -27,7 +27,8 @@ Plugin 'mileszs/ack.vim'
 "Plugin 'airblade/vim-rooter'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'jiangmiao/auto-pairs'
-Plugin "tpope/vim-commentary"
+Plugin 'tpope/vim-commentary'
+Plugin 'tommcdo/vim-exchange'
 "Plugin 'saltstack/salt-vim'
 
 
