@@ -39,4 +39,4 @@ call vundle#end()            " required
 so ~/.wricardorc_configs
 so ~/.wricardorc_mappings
 so ~/.wricardorc_extras
-colorscheme atom-dark
+colorscheme welpe
