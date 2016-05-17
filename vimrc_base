@@ -29,6 +29,8 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-commentary'
 Plugin 'tommcdo/vim-exchange'
+"Colorscheme
+Plugin 'tstelzer/welpe.vim'
 "Plugin 'saltstack/salt-vim'
 
 
