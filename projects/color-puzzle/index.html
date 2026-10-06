@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Color Puzzle Generator — Wallace Ricardo</title>
+  <meta name="description" content="Randomizes a 2×6 grid so each column gets a unique pair from four colors — a quick generator for puzzle setups.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="/">wricardo<span>.</span>github<span>.</span>io</a>
+      <nav>
+        <a href="/#projects">Projects</a>
+        <a href="https://github.com/wricardo">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <a class="back" href="/">← All projects</a>
+
+    <section class="detail-hero">
+      <p class="eyebrow">Project 08 · Browser utilities</p>
+      <h1>Color Puzzle <em>Generator</em></h1>
+      <p class="lede">One click shuffles a 2×6 grid so every column holds a different pair of colors. Built to set up a physical puzzle game quickly.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/puzzle-gen/index.html">Open app ↗</a>
+      </div>
+    </section>
+
+    <dl class="meta">
+      <div><dt>Type</dt><dd>Game helper</dd></div>
+      <div><dt>Stack</dt><dd>HTML, vanilla JS</dd></div>
+      <div><dt>Size</dt><dd>~75 lines</dd></div>
+      <div><dt>Year</dt><dd>2025</dd></div>
+    </dl>
+
+    <div class="demo">
+      <div class="demo-bar"><i></i><i></i><i></i><span>/puzzle-gen/index.html</span></div>
+      <iframe src="/puzzle-gen/index.html" height="440" title="Color Puzzle Generator demo" loading="lazy"></iframe>
+    </div>
+
+    <div class="prose">
+      <h3>How it works</h3>
+      <div class="body">
+<p>Four colors — green, orange, blue, purple — form exactly six unique pairs. Each randomize:</p>
+<ul>
+  <li>Picks the six pairs in random order, one per column, without repeats.</li>
+  <li>Flips each pair with 50% probability, so either color can land on top.</li>
+  <li>Paints the two cells of the column with the pair.</li>
+</ul>
+<p>Result: every combination appears exactly once per board, in a different layout each time.</p>
+      </div>
+    </div>
+
+    <a class="next" href="/projects/motor-programming/">
+      <small>Next project →</small>
+      <div>Dr Brain: Motor Programming</div>
+    </a>
+
+    <footer class="site-footer">
+      <span>© Wallace Ricardo</span>
+      <span>Static site · GitHub Pages</span>
+    </footer>
+  </div>
+</body>
+</html>

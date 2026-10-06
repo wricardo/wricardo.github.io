@@ -1,6 +1,158 @@
-<h1>Index</h1>
-<ul>
-    <li><a href="/totp-generator/public/index.html">TOTP Generator</a></li>
-    <li><a href="/puzzle-gen/index.html">Color puzzle generator</a></li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wallace Ricardo — Projects</title>
+  <meta name="description" content="Games, developer tools and browser utilities by Wallace Ricardo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="/">wricardo<span>.</span>github<span>.</span>io</a>
+      <nav>
+        <a href="/#projects">Projects</a>
+        <a href="https://github.com/wricardo">GitHub ↗</a>
+      </nav>
+    </header>
 
+    <section class="hero">
+      <p class="eyebrow">Index of things</p>
+      <h1>Games, tools<br><em>&amp; small experiments.</em></h1>
+      <p class="lede">Puzzle games that people and AI agents can both play, GraphQL tooling, a Factorio mod, and a few browser utilities.</p>
+      <div class="jump"><a href="#games">Games for humans &amp; AI</a><a href="#tools">Developer tools</a><a href="#utils">Browser utilities</a></div>
+    </section>
+
+    <div id="projects">
+    <section class="group" id="games">
+      <div class="section-label"><span>Games for humans &amp; AI</span><span>04</span></div>
+      <ul class="projects">
+        <li class="project">
+          <a href="/projects/motor-programming/">
+            <span class="num">01</span>
+            <div>
+              <h2>Dr Brain: Motor Programming</h2>
+              <p>A puzzle game about programming a little robot with tiny tapes and subroutines. Humans drag instructions; AI agents play through a GraphQL API.</p>
+              <div class="tags"><span class="tag">Go</span><span class="tag">GraphQL</span><span class="tag">SvelteKit</span><span class="tag">AI agents</span></div>
+            </div>
+            <div class="thumb thumb-shot"><img src="/assets/shots/motor-programming.webp" alt="" loading="lazy"></div>
+          </a>
+        </li>
+        <li class="project">
+          <a href="/projects/mazes/">
+            <span class="num">02</span>
+            <div>
+              <h2>Dr Brain: Mazes</h2>
+              <p>Climb a fog-covered tower of maze levels with stairs and numbered portals. Arrow keys for humans, GraphQL for AI agents.</p>
+              <div class="tags"><span class="tag">Go</span><span class="tag">GraphQL</span><span class="tag">SvelteKit</span><span class="tag">AI agents</span></div>
+            </div>
+            <div class="thumb thumb-shot"><img src="/assets/shots/mazes.webp" alt="" loading="lazy"></div>
+          </a>
+        </li>
+        <li class="project">
+          <a href="/projects/tesla-road-trip/">
+            <span class="num">03</span>
+            <div>
+              <h2>Tesla Road Trip</h2>
+              <p>Drive a Tesla across a grid to visit every park without running out of battery. Built as a testbed for how people and AI agents plan.</p>
+              <div class="tags"><span class="tag">Go</span><span class="tag">GraphQL</span><span class="tag">MCP</span><span class="tag">SvelteKit</span><span class="tag">WebSocket</span></div>
+            </div>
+            <div class="thumb thumb-shot"><img src="/assets/shots/tesla.webp" alt="" loading="lazy"></div>
+          </a>
+        </li>
+        <li class="project">
+          <a href="/projects/factorio-cashflow/">
+            <span class="num">04</span>
+            <div>
+              <h2>Cashflow (Factorio mod)</h2>
+              <p>A Factorio 2.0 mod that turns personal finance into belts: iron plates are cash, copper plates are bills and debt.</p>
+              <div class="tags"><span class="tag">Lua</span><span class="tag">Factorio 2.0</span><span class="tag">Mod</span></div>
+            </div>
+            <div class="thumb"><div class="thumb-belts">
+  <div class="belt belt-iron"></div>
+  <div class="belt belt-copper"></div>
+  <div class="belt-label"><span>+$10 iron</span><span>−$10 copper</span></div>
+</div></div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="group" id="tools">
+      <div class="section-label"><span>Developer tools</span><span>02</span></div>
+      <ul class="projects">
+        <li class="project">
+          <a href="/projects/gqlcli/">
+            <span class="num">05</span>
+            <div>
+              <h2>gqlcli</h2>
+              <p>A GraphQL client for the terminal and a Go library for building GraphQL-backed CLIs. Schema discovery, scripting and token-lean output for AI agents.</p>
+              <div class="tags"><span class="tag">Go</span><span class="tag">GraphQL</span><span class="tag">CLI</span><span class="tag">Library</span></div>
+            </div>
+            <div class="thumb"><div class="thumb-term"><b>$</b> gqlcli queries
+<i>users</i>    [User!]!
+<i>user</i>     (id: ID!) User</div></div>
+          </a>
+        </li>
+        <li class="project">
+          <a href="/projects/quickgql/">
+            <span class="num">06</span>
+            <div>
+              <h2>quickgql</h2>
+              <p>Spin up GraphQL endpoints at runtime for testing and PoCs — schema as JSON, resolvers in JavaScript, no config files, no restart.</p>
+              <div class="tags"><span class="tag">Go</span><span class="tag">GraphQL</span><span class="tag">goja</span><span class="tag">mongolite</span></div>
+            </div>
+            <div class="thumb"><div class="thumb-paths">
+  <div><span class="dot"></span>/graphql</div>
+  <div><span class="dot live"></span>/endpointa/graphql</div>
+  <div><span class="dot live"></span>/endpointb/graphql</div>
+  <div class="ghost">+ createEndpoint</div>
+</div></div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="group" id="utils">
+      <div class="section-label"><span>Browser utilities</span><span>02</span></div>
+      <ul class="projects">
+        <li class="project">
+          <a href="/projects/totp-generator/">
+            <span class="num">07</span>
+            <div>
+              <h2>TOTP Generator</h2>
+              <p>Generate time-based one-time passwords from a secret key, entirely in the browser. Includes a hex to base-32 converter.</p>
+              <div class="tags"><span class="tag">Vue</span><span class="tag">otpauth</span><span class="tag">2FA</span></div>
+            </div>
+            <div class="thumb"><div class="thumb-totp"><div class="code">482 913</div><div class="bar"><i></i></div></div></div>
+          </a>
+        </li>
+        <li class="project">
+          <a href="/projects/color-puzzle/">
+            <span class="num">08</span>
+            <div>
+              <h2>Color Puzzle Generator</h2>
+              <p>Randomizes a 2×6 grid so each column gets a unique pair from four colors — a quick generator for puzzle setups.</p>
+              <div class="tags"><span class="tag">Vanilla JS</span><span class="tag">Game</span></div>
+            </div>
+            <div class="thumb"><div class="mini-grid">
+  <i class="c-green"></i><i class="c-blue"></i><i class="c-orange"></i><i class="c-purple"></i><i class="c-blue"></i><i class="c-orange"></i>
+  <i class="c-orange"></i><i class="c-purple"></i><i class="c-blue"></i><i class="c-green"></i><i class="c-green"></i><i class="c-purple"></i>
+</div></div>
+          </a>
+        </li>
+      </ul>
+    </section>
+    </div>
+
+    <footer class="site-footer">
+      <span>© Wallace Ricardo</span>
+      <span>Static site · GitHub Pages</span>
+    </footer>
+  </div>
+</body>
+</html>

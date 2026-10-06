@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TOTP Generator — Wallace Ricardo</title>
+  <meta name="description" content="Generate time-based one-time passwords from a secret key, entirely in the browser. Includes a hex to base-32 converter.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="/">wricardo<span>.</span>github<span>.</span>io</a>
+      <nav>
+        <a href="/#projects">Projects</a>
+        <a href="https://github.com/wricardo">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <a class="back" href="/">← All projects</a>
+
+    <section class="detail-hero">
+      <p class="eyebrow">Project 07 · Browser utilities</p>
+      <h1>TOTP <em>Generator</em></h1>
+      <p class="lede">Generate time-based one-time passwords in the browser — useful when you lose access to the phone that holds your authenticator.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/totp-generator/public/index.html">Open app ↗</a>
+        <a class="btn btn-ghost" href="/totp-generator/public/hex-to-base32.html">Hex → base-32 converter</a>
+        <a class="btn btn-ghost" href="https://github.com/jaden/totp-generator">Upstream source ↗</a>
+      </div>
+    </section>
+
+    <dl class="meta">
+      <div><dt>Type</dt><dd>Web utility</dd></div>
+      <div><dt>Stack</dt><dd>Vue 2, Bulma</dd></div>
+      <div><dt>Library</dt><dd>otpauth 3.1.3</dd></div>
+      <div><dt>Runs</dt><dd>Client-side only</dd></div>
+    </dl>
+
+    <div class="demo">
+      <div class="demo-bar"><i></i><i></i><i></i><span>/totp-generator/public/index.html</span></div>
+      <iframe src="/totp-generator/public/index.html" height="560" title="TOTP Generator demo" loading="lazy"></iframe>
+    </div>
+
+    <div class="prose">
+      <h3>About</h3>
+      <div class="body">
+<p>Enter a base-32 secret, the number of digits and the token period. The token refreshes automatically, with a progress bar showing time until the next one. Nothing leaves the page.</p>
+<p>The secret can also be passed in the URL hash: <code>/totp-generator/public/index.html#/KEY</code>.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h3>Authy tokens</h3>
+      <div class="body">
+<p>Authy secrets are exported as hex. Convert them with the bundled hex → base-32 converter, then use these settings:</p>
+<ul>
+  <li><strong>Digits:</strong> 7</li>
+  <li><strong>Period:</strong> 10 seconds (Authy shows 20 but skips every other token)</li>
+</ul>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h3>Credits</h3>
+      <div class="body">
+<p>Fork of <a href="https://github.com/jaden/totp-generator">jaden/totp-generator</a> by Dan Hersam, built on <a href="https://github.com/hectorm/otpauth">otpauth</a>.</p>
+      </div>
+    </div>
+
+    <a class="next" href="/projects/color-puzzle/">
+      <small>Next project →</small>
+      <div>Color Puzzle Generator</div>
+    </a>
+
+    <footer class="site-footer">
+      <span>© Wallace Ricardo</span>
+      <span>Static site · GitHub Pages</span>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr Brain: Mazes — Wallace Ricardo</title>
+  <meta name="description" content="Climb a fog-covered tower of maze levels with stairs and numbered portals. Arrow keys for humans, GraphQL for AI agents.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="/">wricardo<span>.</span>github<span>.</span>io</a>
+      <nav>
+        <a href="/#projects">Projects</a>
+        <a href="https://github.com/wricardo">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <a class="back" href="/">← All projects</a>
+
+    <section class="detail-hero">
+      <p class="eyebrow">Project 02 · Games for humans &amp; AI</p>
+      <h1><em>Mazes</em></h1>
+      <p class="lede">Climb the tower, find the way out, mind the portals. You only ever see the level you're standing on — the rest stays dark until you get there.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://mazes.wricardo.net/">Play it ↗</a>
+        <a class="btn btn-ghost" href="https://github.com/wricardo/drbrain-mazes">GitHub repo ↗</a>
+        <a class="btn btn-ghost" href="https://mazes.wricardo.net/llms.txt">llms.txt ↗</a>
+      </div>
+    </section>
+
+    <dl class="meta">
+      <div><dt>Type</dt><dd>Maze game</dd></div>
+      <div><dt>Stack</dt><dd>Go, GraphQL, SvelteKit</dd></div>
+      <div><dt>Maps</dt><dd>16, up to 6 levels</dd></div>
+      <div><dt>Players</dt><dd>Humans &amp; AI</dd></div>
+    </dl>
+
+    <a class="demo" href="https://mazes.wricardo.net/">
+      <div class="demo-bar"><i></i><i></i><i></i><span>mazes.wricardo.net</span><em>Open ↗</em></div>
+      <img src="/assets/shots/mazes.webp" alt="Dr Brain: Mazes screenshot">
+    </a>
+
+    <div class="prose">
+      <h3>How it works</h3>
+      <div class="body">
+<p>Walk an explorer from <strong>START</strong> on the bottom level to <strong>FINISH</strong> on the top. Stone is floor, black is void.</p>
+<ul>
+  <li><strong>Blue up arrow</strong> lifts you one level; <strong>red down arrow</strong> drops you one.</li>
+  <li><strong>Glowing holes</strong> (1–9) pipe you to the matching hole, possibly on another level.</li>
+  <li>Each map has a move limit and a <strong>par</strong> — the shortest possible route.</li>
+</ul>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h3>Maps</h3>
+      <div class="body">
+<p>16 maps, from <em>First Steps</em> and <em>Ladder</em> through <em>Wormholes</em> and <em>Tower Maze</em> up to <em>Grand Tower</em> and <em>Miner's Shaft</em> — six-level towers with pipes and staircases everywhere.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h3>Playing with AI</h3>
+      <div class="body">
+<p>Same model as Motor Programming: copy the in-game AI prompt, or hand an agent <a href="https://mazes.wricardo.net/llms.txt"><code>/llms.txt</code></a>. The agent reads the level it's on, moves, and sees what changes — exploring under the same fog a human does.</p>
+      </div>
+    </div>
+
+    <a class="next" href="/projects/tesla-road-trip/">
+      <small>Next project →</small>
+      <div>Tesla Road Trip</div>
+    </a>
+
+    <footer class="site-footer">
+      <span>© Wallace Ricardo</span>
+      <span>Static site · GitHub Pages</span>
+    </footer>
+  </div>
+</body>
+</html>

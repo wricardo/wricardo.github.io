@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>gqlcli — Wallace Ricardo</title>
+  <meta name="description" content="A GraphQL client for the terminal and a Go library for building GraphQL-backed CLIs. Schema discovery, scripting and token-lean output for AI agents.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="/">wricardo<span>.</span>github<span>.</span>io</a>
+      <nav>
+        <a href="/#projects">Projects</a>
+        <a href="https://github.com/wricardo">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <a class="back" href="/">← All projects</a>
+
+    <section class="detail-hero">
+      <p class="eyebrow">Project 05 · Developer tools</p>
+      <h1><em>gqlcli</em></h1>
+      <p class="lede">Discover, query and script any GraphQL API from the command line — with output formats sized for humans, jq, and LLMs.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://github.com/wricardo/gqlcli">GitHub repo ↗</a>
+        <a class="btn btn-ghost" href="https://github.com/wricardo/gqlcli/releases">Releases ↗</a>
+      </div>
+    </section>
+
+    <dl class="meta">
+      <div><dt>Type</dt><dd>CLI + Go library</dd></div>
+      <div><dt>Language</dt><dd>Go</dd></div>
+      <div><dt>Latest</dt><dd>v0.10.0</dd></div>
+      <div><dt>License</dt><dd>MIT</dd></div>
+    </dl>
+
+    <div class="demo demo-term">
+      <div class="demo-bar"><i></i><i></i><i></i><span>terminal</span></div>
+      <pre><span class="p">$</span> curl -fsSL https://raw.githubusercontent.com/wricardo/gqlcli/main/install.sh | bash
+
+<span class="p">$</span> gqlcli queries --filter user --desc
+<span class="p">$</span> gqlcli describe User --args --depth 1
+<span class="p">$</span> gqlcli query --query "{ users { id name } }" -f table
+<span class="p">$</span> gqlcli query --env prod --query-file ./getUser.graphql --variables '{"id":"123"}'</pre>
+    </div>
+
+    <div class="prose">
+      <h3>Commands</h3>
+      <div class="body">
+<ul>
+  <li><code>queries</code>, <code>mutations</code>, <code>types</code>, <code>describe</code> — explore the schema instantly.</li>
+  <li><code>query</code>, <code>mutation</code>, <code>subscribe</code> — execute, with built-in <code>--jq</code> filtering.</li>
+  <li><code>batch</code> and <code>script</code> — run many operations, or JavaScript workflows with async/await and <code>gql.each()</code>.</li>
+  <li><code>validate</code>, <code>sdl</code>, <code>op</code>, <code>embed</code> — offline validation, saved operations, semantic schema search.</li>
+</ul>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h3>Output</h3>
+      <div class="body">
+<p>Default format is <strong>toon</strong>, a token-optimized format 40–60% smaller than JSON. Also <code>json</code>, <code>table</code>, <code>llm</code> (markdown) and <code>compact</code>.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h3>Config</h3>
+      <div class="body">
+<p>Per-directory <code>.gqlcli.json</code> with named environments (<code>local</code>, <code>qa</code>, <code>prod</code>), bearer auth, custom headers, retries and an on-disk schema cache.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h3>As a library</h3>
+      <div class="body">
+<p>Build Go CLIs where GraphQL is the interface instead of subcommands and flags — a good fit for AI agents that can introspect a schema and write their own queries.</p>
+      </div>
+    </div>
+
+    <a class="next" href="/projects/quickgql/">
+      <small>Next project →</small>
+      <div>quickgql</div>
+    </a>
+
+    <footer class="site-footer">
+      <span>© Wallace Ricardo</span>
+      <span>Static site · GitHub Pages</span>
+    </footer>
+  </div>
+</body>
+</html>

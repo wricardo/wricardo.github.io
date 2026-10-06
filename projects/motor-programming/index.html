@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr Brain: Motor Programming — Wallace Ricardo</title>
+  <meta name="description" content="A puzzle game about programming a little robot with tiny tapes and subroutines. Humans drag instructions; AI agents play through a GraphQL API.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="/">wricardo<span>.</span>github<span>.</span>io</a>
+      <nav>
+        <a href="/#projects">Projects</a>
+        <a href="https://github.com/wricardo">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <a class="back" href="/">← All projects</a>
+
+    <section class="detail-hero">
+      <p class="eyebrow">Project 01 · Games for humans &amp; AI</p>
+      <h1>Motor <em>Programming</em></h1>
+      <p class="lede">Program the robot, collect every treat, reuse your moves. A puzzle about spotting patterns — playable by humans in the browser and by AI agents over GraphQL.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://motor-programming.wricardo.net/">Play it ↗</a>
+        <a class="btn btn-ghost" href="https://github.com/wricardo/drbrain-motor-programming">GitHub repo ↗</a>
+        <a class="btn btn-ghost" href="https://motor-programming.wricardo.net/llms.txt">llms.txt ↗</a>
+      </div>
+    </section>
+
+    <dl class="meta">
+      <div><dt>Type</dt><dd>Puzzle game</dd></div>
+      <div><dt>Stack</dt><dd>Go, gqlgen, SvelteKit</dd></div>
+      <div><dt>Maps</dt><dd>11, easy → hard</dd></div>
+      <div><dt>Players</dt><dd>Humans &amp; AI</dd></div>
+    </dl>
+
+    <a class="demo" href="https://motor-programming.wricardo.net/">
+      <div class="demo-bar"><i></i><i></i><i></i><span>motor-programming.wricardo.net</span><em>Open ↗</em></div>
+      <img src="/assets/shots/motor-programming.webp" alt="Dr Brain: Motor Programming screenshot">
+    </a>
+
+    <div class="prose">
+      <h3>How it works</h3>
+      <div class="body">
+<p>A robot stands on a grid with rocks and treats. You don't steer it — you write a short program, press <strong>Run</strong>, and watch it follow your instructions one step at a time. Collect every treat to win.</p>
+<ul>
+  <li><strong>Move forward</strong> — one square in the facing direction.</li>
+  <li><strong>Turn left / right</strong> — 90°, staying in place.</li>
+  <li><strong>Call sub 1 / 2 / 3</strong> — run a subroutine, then continue.</li>
+</ul>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h3>The catch</h3>
+      <div class="body">
+<p>The main tape has only a few slots, often far fewer than the route needs. Subroutines can call other subroutines, so a few slots turn into dozens of moves. On some maps a subroutine can call <em>itself</em>, which gives you a loop. Most of the game is folding the route into as few instructions as possible.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h3>Playing with AI</h3>
+      <div class="body">
+<p>Click <strong>Play with an AI</strong> in a game to copy a ready-made prompt for a coding agent, or point an agent at <a href="https://motor-programming.wricardo.net/llms.txt"><code>/llms.txt</code></a>. A full game is four GraphQL calls: pick a map, create a session, set a program, run it. Humans and AIs can share a session, and anyone can watch live.</p>
+      </div>
+    </div>
+
+    <a class="next" href="/projects/mazes/">
+      <small>Next project →</small>
+      <div>Dr Brain: Mazes</div>
+    </a>
+
+    <footer class="site-footer">
+      <span>© Wallace Ricardo</span>
+      <span>Static site · GitHub Pages</span>
+    </footer>
+  </div>
+</body>
+</html>

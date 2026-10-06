@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>quickgql — Wallace Ricardo</title>
+  <meta name="description" content="Spin up GraphQL endpoints at runtime for testing and PoCs — schema as JSON, resolvers in JavaScript, no config files, no restart.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="/">wricardo<span>.</span>github<span>.</span>io</a>
+      <nav>
+        <a href="/#projects">Projects</a>
+        <a href="https://github.com/wricardo">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <a class="back" href="/">← All projects</a>
+
+    <section class="detail-hero">
+      <p class="eyebrow">Project 06 · Developer tools</p>
+      <h1><em>quickgql</em></h1>
+      <p class="lede">One binary, N GraphQL endpoints created at runtime. Define the schema as data, write resolvers in JavaScript, and it's live immediately.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://github.com/wricardo/quickgql">GitHub repo ↗</a>
+      </div>
+    </section>
+
+    <dl class="meta">
+      <div><dt>Type</dt><dd>Dev server</dd></div>
+      <div><dt>Language</dt><dd>Go</dd></div>
+      <div><dt>Resolvers</dt><dd>JavaScript (goja)</dd></div>
+      <div><dt>Storage</dt><dd>mongolite</dd></div>
+    </dl>
+
+    <div class="demo demo-term">
+      <div class="demo-bar"><i></i><i></i><i></i><span>layout</span></div>
+      <pre><span class="p">$</span> quickgql serve --addr :8080 --data-dir ./data
+
+/graphql             <span class="c"># admin API: manage endpoints</span>
+/endpointa/graphql   <span class="c"># created at runtime</span>
+/endpointb/graphql
+
+<span class="c"># resolver for Query.users</span>
+var docs = db.find('users', {});
+docs.forEach(function(d){ d.id = d._id; });
+return docs;</pre>
+    </div>
+
+    <div class="prose">
+      <h3>How it works</h3>
+      <div class="body">
+<p>An admin GraphQL API at <code>/graphql</code> creates and patches endpoints: <code>createEndpoint</code>, <code>setType</code>, <code>setField</code>, <code>setResolver</code> and their removals. Each endpoint mounts at <code>/&lt;name&gt;/graphql</code> with GraphiQL on GET.</p>
+<p>Mutations validate before persisting: a patch that would produce a broken schema is rejected and the running endpoints keep serving.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h3>Resolvers</h3>
+      <div class="body">
+<p>Each resolver is a <code>Type.field</code> key plus a JS body with access to <code>args</code>, <code>parent</code>, <code>ctx</code> and <code>db</code> — a MongoDB-style API (<code>find</code>, <code>insertOne</code>, <code>updateOne</code>…) over the endpoint's own database. Fields without a resolver fall back to plain lookup, so only computed fields need code. Fresh sandbox per call, no Node dependency.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h3>Storage</h3>
+      <div class="body">
+<p>Definitions and data persist in embedded <a href="https://github.com/wricardo/mongolite">mongolite</a> instances — single-file, MongoDB wire-protocol compatible — one per endpoint plus a meta database.</p>
+      </div>
+    </div>
+
+    <a class="next" href="/projects/totp-generator/">
+      <small>Next project →</small>
+      <div>TOTP Generator</div>
+    </a>
+
+    <footer class="site-footer">
+      <span>© Wallace Ricardo</span>
+      <span>Static site · GitHub Pages</span>
+    </footer>
+  </div>
+</body>
+</html>

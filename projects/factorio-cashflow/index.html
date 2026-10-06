@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cashflow (Factorio mod) — Wallace Ricardo</title>
+  <meta name="description" content="A Factorio 2.0 mod that turns personal finance into belts: iron plates are cash, copper plates are bills and debt.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="/">wricardo<span>.</span>github<span>.</span>io</a>
+      <nav>
+        <a href="/#projects">Projects</a>
+        <a href="https://github.com/wricardo">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <a class="back" href="/">← All projects</a>
+
+    <section class="detail-hero">
+      <p class="eyebrow">Project 04 · Games for humans &amp; AI</p>
+      <h1><em>Cashflow</em> for Factorio</h1>
+      <p class="lede">A personal-finance game inside ordinary Factorio Freeplay. Iron plates are cash, copper plates are bills, and you run your money with belts.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://github.com/wricardo/factorio-cashflow-mod">GitHub repo ↗</a>
+        <a class="btn btn-ghost" href="https://github.com/wricardo/factorio-cashflow-mod/releases">Releases ↗</a>
+      </div>
+    </section>
+
+    <dl class="meta">
+      <div><dt>Type</dt><dd>Factorio mod</dd></div>
+      <div><dt>Language</dt><dd>Lua</dd></div>
+      <div><dt>Game</dt><dd>Factorio 2.0</dd></div>
+      <div><dt>Latest</dt><dd>v1.0.1</dd></div>
+    </dl>
+
+    <div class="demo demo-term">
+      <div class="demo-bar"><i></i><i></i><i></i><span>install (macOS)</span></div>
+      <pre><span class="p">$</span> curl -fsSL https://raw.githubusercontent.com/wricardo/factorio-cashflow-mod/main/scripts/install-latest.sh | bash
+
+<span class="c"># wiring</span>
+Passive Income  CASH OUT      <span class="a">→</span> Cashflow CASH IN
+Expense         COPPER OUT    <span class="a">→</span> Cashflow BILLS IN
+Cashflow        SURPLUS OUT   <span class="a">→</span> Investment DEPOSIT IN
+Cashflow        UNPAID OUT    <span class="a">→</span> Debt BORROW IN
+Debt            INTEREST OUT  <span class="a">→</span> Cashflow BILLS IN</pre>
+    </div>
+
+    <div class="prose">
+      <h3>How it works</h3>
+      <div class="body">
+<ul>
+  <li>One <strong>iron plate</strong> is $10 cash; one <strong>copper plate</strong> is a $10 bill or $10 of debt.</li>
+  <li>A <strong>Cashflow Station</strong> cancels one iron against one copper. What's left is surplus or unpaid bills.</li>
+  <li>Unpaid bills go to a <strong>Debt Station</strong> that charges monthly interest; surplus goes to an <strong>Investment Account</strong> that pays monthly returns.</li>
+  <li>A month is 60 seconds; every 12th month brings a yearly report.</li>
+</ul>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h3>Stations</h3>
+      <div class="body">
+<p>Account (dashboard), Passive Income, Active Income (feed it 50 coal a month for a salary), Expense, Cashflow, Debt, Investment Account, Coal Supply and a Percent Splitter. Each Account is independent — run several — and nothing in vanilla Freeplay is restricted.</p>
+      </div>
+    </div>
+
+    <a class="next" href="/projects/gqlcli/">
+      <small>Next project →</small>
+      <div>gqlcli</div>
+    </a>
+
+    <footer class="site-footer">
+      <span>© Wallace Ricardo</span>
+      <span>Static site · GitHub Pages</span>
+    </footer>
+  </div>
+</body>
+</html>
