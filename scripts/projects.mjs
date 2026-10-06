@@ -107,7 +107,7 @@ export const projects = [
       "Drive the car across the map, visit every park, don't run out of battery. A grid game for exploring how people and AI agents make decisions.",
     tags: ["Go", "GraphQL", "MCP", "SvelteKit", "WebSocket"],
     links: [
-      { label: "Play it", href: "http://tesla.wricardo.net/", primary: true },
+      { label: "Play it", href: "https://tesla.wricardo.net/", primary: true },
       { label: "GitHub repo", href: `${GH}/tesla-road-trip-game` },
     ],
     meta: [
